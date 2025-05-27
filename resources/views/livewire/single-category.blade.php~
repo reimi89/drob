@@ -1,0 +1,26 @@
+<section class="category-page">
+    <div class="container">
+        <!-- Хлебные крошки -->
+        <nav class="breadcrumbs">
+        </nav>
+
+        <!-- Заголовок категории -->
+        <div class="category-header">
+            <h1 class="category-title">{{ $category->name }}</h1>
+            <p class="category-description">{{ $category->description }}</p>
+        </div>
+        <!-- Список продуктов -->
+        <x-product.product-group :categories="$categories" />
+
+        <!-- Пагинация -->
+        <div class="pagination">
+            <a href="#" class="pagination__arrow">&larr;</a>
+            <a href="#" class="pagination__link active">1</a>
+            <a href="#" class="pagination__link">2</a>
+            <a href="#" class="pagination__link">3</a>
+            <span class="pagination__dots">...</span>
+            <a href="#" class="pagination__link">5</a>
+            <a href="#" class="pagination__arrow">&rarr;</a>
+        </div>
+    </div>
+</section>
